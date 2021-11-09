@@ -1,6 +1,6 @@
 trigger:
-- '*'
-
+  - '*'
+  
 pool:
   vmImage: 'ubuntu-20.04'
   demands:
@@ -51,7 +51,7 @@ steps:
     command: custom
     custom: tool
     arguments: 'restore'
-  
+
 - task: DotNetCoreCLI@2
   displayName: 'Run unit tests - $(buildConfiguration)'
   inputs:
